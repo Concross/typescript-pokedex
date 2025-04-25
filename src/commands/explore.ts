@@ -14,9 +14,11 @@ export async function commandExplore(state: State, ...args: string[]) {
             return;
         }
 
-        console.log('Found pokemon: ');
+        console.log('Found pokemon:');
         const pokemonList = response.pokemon_encounters.map((encounter) => `- ${encounter.pokemon.name}`);
-        console.log(pokemonList.join('\n'));
+        pokemonList.forEach((pokemon) => {
+            console.log(pokemon);
+        });
     } catch (error) {
         console.error('Error fetching map data:', error);
     }

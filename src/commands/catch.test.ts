@@ -30,7 +30,7 @@ describe('commandCatch', () => {
         state.PokeAPI.fetchPokemon = async (name: string) =>
             ({
                 name,
-                base_experience: 100
+                base_experience: Infinity // Buy a lotto ticket if you catch this one
             } as Pokemon);
         await commandCatch(state, 'charizard');
         expect(state.pokedex['charizard']).toBeUndefined();

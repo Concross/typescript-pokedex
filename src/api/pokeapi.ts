@@ -199,4 +199,45 @@ export type Pokemon = {
             };
         }[];
     }[];
+    stats: {
+        base_stat: number;
+        effort: number;
+        stat: {
+            name: string;
+            url: string;
+        };
+    }[];
+    types: {
+        slot: number;
+        type: {
+            name: string;
+            url: string;
+        };
+    }[];
+    location_area_encounters: {
+        location_area: {
+            name: string;
+            url: string;
+        };
+        version_details: {
+            encounter_details: {
+                chance: number;
+                max_level: number;
+                method: {
+                    name: string;
+                    url: string;
+                };
+            }[];
+            version: {
+                name: string;
+                url: string;
+            };
+        }[];
+    }[];
+    sprites: {
+        front_default?: string | null;
+        back_default?: string | null;
+        front_shiny?: string | null;
+        back_shiny?: string | null;
+    };
 };
